@@ -1,0 +1,27 @@
+<div class="form modal" onclick="event.stopPropagation()">
+  <h3 class="form__title">SEND US MESSAGE</h3>
+  <form action="mail.php" enctype="multipart/form-data" class="form__form" method="POST">
+    <div class="form__item">
+      <label class="form__label">
+        <span class="form__span">Full Name</span>
+        <input class="form__name form-input" name="Name" type="text" placeholder="Your Name">
+      </label>
+    </div>
+    <div class="form__item">
+      <label class="form__label">
+        <span class="form__span">Email</span>
+        <input class="form__email form-input" name="Email" type="email" placeholder="Your Email">
+      </label>
+    </div>
+    <div class="form__item form__item-message">
+      <label class="form__label">
+        <span class="form__span">Message</span>
+        <textarea class="form__message form-input" name="Message" placeholder="Your Message"></textarea>
+      </label>
+    </div>
+    <button class="form__btn link" type="submit">
+      SUBMIT
+    </button>
+  </form>
+  <button class="form__close">x</button>
+</div>

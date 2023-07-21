@@ -1,0 +1,134 @@
+.top {
+  padding: 190px 0 205px;
+  background: linear-gradient(
+    0deg,
+    rgba(152, 195, 232, 0.2) 28.39%,
+    rgba(152, 195, 232, 0) 100%
+  );
+
+  &__inner {
+    display: flex;
+    position: relative;
+  }
+
+  &__left {
+    color: var(--dark-blue);
+  }
+
+  &__title {
+    max-width: 545px;
+    width: 100%;
+    font-family: Galien;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 1.5px;
+  }
+
+  &__suptitle {
+    max-width: 425px;
+    margin: 37px 0 90px;
+    letter-spacing: 0.8px;
+    opacity: 0.6;
+  }
+
+  &__img {
+    position: absolute;
+    top: -101px;
+    right: -189px;
+  }
+}
+
+@media only screen and (max-width: 1336px) {
+  .top__img {
+    padding-right: 15px;
+    width: 500px;
+    height: auto;
+    top: -25px;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .top__img {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .top {
+    padding: 130px 0 180px;
+  }
+
+  .top__title {
+    max-width: 495px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .top__img {
+    right: 0;
+    top: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .top__img {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .top {
+    padding: 100px 0;
+  }
+
+  .top__title {
+    max-width: 405px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .top__suptitle {
+    max-width: 405px;
+    margin: 30px 0 60px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .top__img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .top__img {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .top__right {
+    display: none;
+  }
+
+  .top__inner {
+    justify-content: center;
+  }
+
+  .top__link {
+    width: 200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .top__title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}

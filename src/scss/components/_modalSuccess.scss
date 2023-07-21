@@ -1,0 +1,24 @@
+.modal-success {
+  max-width: 400px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    color: var(--dark-blue);
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    max-width: 330px;
+    padding: 30px;
+  }
+
+  .modal-success .form__close {
+    top: 0px;
+    right: 10px;
+  }
+}

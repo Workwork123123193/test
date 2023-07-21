@@ -1,0 +1,151 @@
+:root {
+  --white: #fff;
+  --dark-blue: #1f3f68;
+  --middle-blue: #5a98d0;
+  --light-blue: #316099;
+}
+
+html {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  min-height: 100%;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  position: relative;
+  color: var(--white);
+  background: var(--white);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  &.active::after {
+    background-color: rgba(107, 107, 216, 0.5);
+    opacity: 1;
+    z-index: 100;
+  }
+
+  &.active {
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--middle-blue);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+textarea {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 970px;
+  width: 100%;
+}
+
+.link {
+  padding: 18px 48px;
+  letter-spacing: 0.64px;
+  color: var(--white);
+  border-radius: 10px;
+  background: var(--middle-blue);
+  box-shadow: 5px 10px 20px 0px rgba(53, 110, 173, 0.2);
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 5px rgba(53, 110, 173, 0.4);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .link {
+    padding: 15px 40px;
+  }
+}
