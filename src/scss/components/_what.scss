@@ -90,7 +90,7 @@
   &__animation {
     transform: translateY(120px);
     opacity: 0;
-    transition: all 0.6s;
+    transition: all 0.7s;
 
     &.active {
       transform: translateY(0);
@@ -102,12 +102,6 @@
 @media only screen and (max-width: 992px) {
   .what {
     padding: 150px 0;
-  }
-
-  .what__title,
-  .what__item-1 {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -128,16 +122,6 @@
 
   .what__item {
     margin: 0 auto 35px auto !important;
-  }
-
-  .what__item-1 {
-    transform: translateY(120px);
-    opacity: 0;
-  }
-
-  .what__item-2 {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 

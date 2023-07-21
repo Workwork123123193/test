@@ -2,6 +2,7 @@
   padding: 96px 0 125px;
   border-radius: 200px 0px 0px 0px;
   background: var(--middle-blue);
+  overflow-x: hidden;
 
   &__top {
     margin-bottom: 111px;
@@ -89,7 +90,7 @@
 
   &__animation {
     opacity: 0;
-    transition: all 0.6s;
+    transition: all 0.7s;
 
     &.active {
       opacity: 1;
