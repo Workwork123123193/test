@@ -1,17 +1,13 @@
-const whatItems = document.querySelectorAll(".what__animation");
-const clientsItems = document.querySelectorAll(".clients__animation");
+const animationItems = document.querySelectorAll(
+  ".what__animation, .clients__animation"
+);
 
 window.addEventListener("scroll", animation);
 document.addEventListener("DOMContentLoaded", animation);
 
 function animation() {
-  for (let i = 0; i < whatItems.length; i++) {
-    const animItem = whatItems[i];
-    animateItem(animItem);
-  }
-
-  for (let i = 0; i < clientsItems.length; i++) {
-    const animItem = clientsItems[i];
+  for (let i = 0; i < animationItems.length; i++) {
+    const animItem = animationItems[i];
     animateItem(animItem);
   }
 }

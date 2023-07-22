@@ -3,14 +3,13 @@ const modalForm = document.querySelector(".form");
 const modalSuccess = document.querySelector(".modal-success");
 const button = document.querySelector(".footer__top-modal");
 const form = document.querySelector(".form__form");
-const crosses = document.querySelectorAll(".form__close");
 const modals = document.querySelectorAll(".modal");
 
-body.addEventListener("click", closeModalByBody);
 button.addEventListener("click", openModal);
 form.addEventListener("submit", formValidation);
-crosses.forEach((btn) => {
-  btn.addEventListener("click", closeModalByCross);
+body.addEventListener("click", closeModalByBody);
+modals.forEach((modal) => {
+  modal.addEventListener("click", closeModalByCross);
 });
 
 function openModal() {
@@ -19,10 +18,12 @@ function openModal() {
 }
 
 function closeModalByCross(e) {
-  const currentModal = e.target.closest(".modal");
+  if (e.target.classList.contains("form__close")) {
+    const currentModal = e.target.closest(".modal");
 
-  currentModal.classList.remove("active");
-  body.classList.remove("active");
+    currentModal.classList.remove("active");
+    body.classList.remove("active");
+  }
 }
 
 function closeModalByBody() {
@@ -40,9 +41,7 @@ function formValidation(e) {
   const isEmailValid = checkEmail();
   const isMessageValid = checkMessage();
 
-  if (!isNameValid || !isEmailValid || !isMessageValid) {
-    return;
-  }
+  if (!isNameValid || !isEmailValid || !isMessageValid) return;
 
   const formData = new FormData(e.target);
 
