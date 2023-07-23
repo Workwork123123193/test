@@ -47,14 +47,14 @@ function formValidation(e) {
 
   const formData = new FormData(e.target);
 
-  fetch("mail.php", {
+ fetch("mail.php", {
     method: "POST",
     body: formData,
   })
     .then((response) => {
       if (response.ok) {
         e.target.reset();
-        modalForm.classList.remove("sending", "active");
+        modalForm.classList.remove("active");
         modalSuccess.classList.add("active");
       } else {
         throw new Error("Form submission failed.");
@@ -62,6 +62,9 @@ function formValidation(e) {
     })
     .catch((error) => {
       console.error(error);
+    })
+    .finally(() => {
+      modalForm.classList.remove("sending");
     });
 }
 
