@@ -43,6 +43,8 @@ function formValidation(e) {
 
   if (!isNameValid || !isEmailValid || !isMessageValid) return;
 
+  modalForm.classList.add("sending");
+
   const formData = new FormData(e.target);
 
   fetch("mail.php", {
@@ -52,7 +54,7 @@ function formValidation(e) {
     .then((response) => {
       if (response.ok) {
         e.target.reset();
-        modalForm.classList.remove("active");
+        modalForm.classList.remove("sending", "active");
         modalSuccess.classList.add("active");
       } else {
         throw new Error("Form submission failed.");

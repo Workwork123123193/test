@@ -7,7 +7,6 @@
 
 html {
   min-height: 100vh;
-  font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -20,9 +19,9 @@ html {
 }
 
 .body {
-  margin: 0;
   min-width: 360px;
   height: 100%;
+  margin: 0;
   font-family: "Gilroy", sans-serif;
   font-size: 16px;
   line-height: 26px;
@@ -79,16 +78,16 @@ a {
 }
 
 button {
-  border: none;
   padding: 0;
+  border: none;
   background: transparent;
   cursor: pointer;
 }
 
 ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 input {
@@ -121,18 +120,18 @@ h6 {
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 15px;
   max-width: 970px;
   width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .link {
   padding: 18px 48px;
   display: inline-flex;
   letter-spacing: 0.64px;
-  color: var(--white);
   border-radius: 10px;
+  color: var(--white);
   background: var(--middle-blue);
   box-shadow: 5px 10px 20px 0px rgba(53, 110, 173, 0.2);
   transition: all 0.3s;
